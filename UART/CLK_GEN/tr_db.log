@@ -1,0 +1,4 @@
+  CREATE_STREAM @0 {NAME:virtual_seq T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:648}
+  CREATE_STREAM @0 {NAME:rst_seq T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:669}
+  CREATE_STREAM @19 {NAME:rand_baud_seq T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:774}
+  CREATE_STREAM @46939 {NAME:rst_baud_seq T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:893}
