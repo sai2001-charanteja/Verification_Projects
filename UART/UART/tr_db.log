@@ -1,4 +1,0 @@
-  CREATE_STREAM @0 {NAME:rst_seq T:Transactions SCOPE:uvm_test_top.agnt.tr STREAM:614}
-  CREATE_STREAM @39 {NAME:main_seq T:Transactions SCOPE:uvm_test_top.agnt.tr STREAM:885}
-  CREATE_STREAM @0 {NAME:rst_seq T:Transactions SCOPE:uvm_test_top.agnt.tr STREAM:614}
-  CREATE_STREAM @39 {NAME:main_seq T:Transactions SCOPE:uvm_test_top.agnt.tr STREAM:885}
