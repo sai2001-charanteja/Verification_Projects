@@ -3,6 +3,54 @@
 
   with O(n) and O(1) memory complexity
  */
+ class sudoku;
+	
+	localparam int N = 9;
+	localparam int M = 3;
+	rand int arr[N][N];
+	
+	constraint cvalid{
+		foreach(arr[i,j]) arr[i][j] inside {[1:N]};
+		foreach(arr[i]){
+			unique {arr[i]};
+		}
+		foreach(arr[i,j]){
+			foreach(arr[k]){
+				if(k>i)
+					arr[i][j] != arr[k][j];
+			}
+		}
+		
+		foreach(arr[i,j])
+			foreach(arr[k,l]){
+				if((i!=k && j!=l) && i/3 == k/3 && j/3 == l/3)
+					arr[i][j] != arr[k][l];
+			}
+				
+		
+	}
+	
+	function void post_randomize();
+		$display("\n------------------------");
+		foreach(arr[i]) begin
+			$write("|");
+			foreach(arr[,j]) begin
+				$write("%1d ",arr[i][j]);
+				
+				if(j%3 == 2)
+					$write("| ");
+			end
+			if(i%3==2)
+				$display("\n------------------------");
+			else
+				$display();
+		end
+		
+	endfunction
+
+endclass
+
+
 class packet;
   
   localparam int N = 9;
